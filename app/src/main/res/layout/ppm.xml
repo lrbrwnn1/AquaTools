@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.browning.rex.aquatools.PPM">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
+
+
+    <EditText
+        android:id="@+id/PPM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Enter desired parts-per-million"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/Gallons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/PPM"
+        android:layout_alignStart="@+id/PPM"
+        android:layout_below="@+id/PPM"
+        android:ems="10"
+        android:hint="Enter number of gallons"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/ppmcalc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Gallons"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:text="Calculate" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/PPM_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</RelativeLayout>
+
