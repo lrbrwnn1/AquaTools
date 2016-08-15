@@ -1,19 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.browning.rex.aquatools.TabFragment1">
+    tools:context="com.browning.rex.aquatools.CylinderVolume">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
 
 
     <TextView
         android:id="@+id/cylinder_volume_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/toolbar"
         android:layout_centerHorizontal="true"
-        android:padding="20dp"
+        android:padding="15dp"
         android:text="Cylinder Volume"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
         android:id="@+id/CylinderHeight"
@@ -24,7 +29,7 @@
         android:ems="10"
         android:hint="Enter height in inches"
         android:inputType="numberDecimal"
-        android:padding="20dp" />
+        android:padding="15dp" />
 
     <EditText
         android:id="@+id/CylinderRadius"
@@ -35,7 +40,7 @@
         android:ems="10"
         android:hint="Enter radius in inches"
         android:inputType="numberDecimal"
-        android:padding="20dp" />
+        android:padding="15dp" />
 
     <Button
         android:id="@+id/CylinderButton"
@@ -43,15 +48,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/CylinderRadius"
         android:layout_centerHorizontal="true"
-        android:padding="20dp"
+        android:padding="15dp"
         android:text="Calculate" />
 
     <TextView
-        android:id="@+id/CylinderVolume"
+        android:id="@+id/CylinderOutput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:hint="@string/answer_will_appear_here"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/CylinderButton"
+        android:padding="15dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    />
+
 </RelativeLayout>

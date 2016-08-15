@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".PPM" />
         <activity android:name=".PPT" />
-        <activity android:name=".VolumeMenu"></activity>
+        <activity android:name=".CylinderVolume" />
+        <activity android:name=".RectangleVolume"></activity>
     </application>
 
 </manifest>

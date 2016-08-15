@@ -20,12 +20,14 @@ public class PPM extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ppm);
+        android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
 
         PPM = (EditText) findViewById(R.id.PPM);
         Gallons = (EditText) findViewById(R.id.Gallons);
         Button ppm_button = (Button) findViewById(R.id.ppmcalc);
         PPM_result = (TextView) findViewById(R.id.PPM_result);
-
         ppm_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,6 +35,7 @@ public class PPM extends AppCompatActivity {
             }
         });
     }
+
 
     @TargetApi(Build.VERSION_CODES.N)
     private void makeCalculation() {
@@ -45,6 +48,7 @@ public class PPM extends AppCompatActivity {
         result1 = Math.round(result1 * 1000.0) / 10000.0;
         result2 = Math.round(result2 * 10000.0) / 10000.0;
         PPM_result.setText("The result is " + result1 + " mg or ml \n" + "The result is " + result2 + " lbs");
+
     }
 
 

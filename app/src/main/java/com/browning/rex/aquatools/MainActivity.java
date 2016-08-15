@@ -8,10 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public Button button1;
     public Button button2;
     public Button button3;
+    public Button button4;
 
     public void ppt_init() {
         button1 = (Button) findViewById(R.id.button1);
@@ -43,15 +44,28 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void vol_init() {
+    public void cylinder_init() {
         button3 = (Button) findViewById(R.id.button3);
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent Vol_Calc = new Intent(MainActivity.this, VolumeMenu.class);
-                startActivity(Vol_Calc);
+                Intent cylVol = new Intent(MainActivity.this, CylinderVolume.class);
+                startActivity(cylVol);
+            }
+        });
+    }
+
+    public void rectangle_init() {
+        button4 = (Button) findViewById(R.id.button4);
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent recVol = new Intent(MainActivity.this, RectangleVolume.class);
+                startActivity(recVol);
             }
         });
     }
@@ -64,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
         setToolBar();
         ppt_init();
         ppm_init();
-        vol_init();
+        rectangle_init();
+        cylinder_init();
+
     }
 
 
@@ -74,5 +90,9 @@ public class MainActivity extends AppCompatActivity {
         ActionBar ab = getSupportActionBar();
 
 
+    }
+
+    @Override
+    public void onClick(View view) {
     }
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.browning.rex.aquatools.RectangleVolume">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
+
+    <TextView
+        android:id="@+id/RectangleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp"
+        android:text="Rectangle Volume"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/RectangleHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RectangleTitle"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter height in inches"
+        android:inputType="numberDecimal"
+        android:padding="15dp" />
+
+    <EditText
+        android:id="@+id/RectangleWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RectangleHeight"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter Width in inches"
+        android:inputType="numberDecimal"
+        android:padding="15dp" />
+
+    <EditText
+        android:id="@+id/RectangleLength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RectangleWidth"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Enter Length in inches"
+        android:inputType="numberDecimal"
+        android:padding="15dp" />
+
+    <Button
+        android:id="@+id/RectangleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RectangleLength"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp"
+        android:text="Calculate" />
+
+    <TextView
+        android:id="@+id/RectangleOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/RectangleButton"
+        android:padding="15dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
