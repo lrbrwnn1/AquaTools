@@ -104,4 +104,7 @@
     <string name="cylinder_calculator">Cylinder Calculator</string>
     <string name="cylinder_volume">Cylinder Volume</string>
     <string name="rectangle_volume">Rectangle Volume</string>
+    <string name="tan_to_uia_conversion">TAN to UIA Conversion</string>
+    <string name="enter_temperature">Enter temperature</string>
+    <string name="enter_nh3_in_mg_l">Enter NH3 in mg/L</string>
 </resources>
