@@ -60,6 +60,4 @@
         android:padding="15dp"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    />
-
 </RelativeLayout>

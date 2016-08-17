@@ -43,11 +43,11 @@ public class PPM extends AppCompatActivity {
         double ppm = Double.valueOf(PPM.getText().toString());
         double gallons = Double.valueOf(Gallons.getText().toString());
         double Lit = (gallons * 3.78541);
-        double result1 = ((ppm * 0.000001) * Lit);
+        double result1 = ((ppm * 0.001) * Lit);
         double result2 = (ppm * 0.000008335882 * gallons);
         result1 = Math.round(result1 * 1000.0) / 10000.0;
         result2 = Math.round(result2 * 10000.0) / 10000.0;
-        PPM_result.setText("The result is " + result1 + " mg or ml \n" + "The result is " + result2 + " lbs");
+        PPM_result.setText("The result is " + result1 + " ml or g \n" + "The result is " + result2 + " lbs");
 
     }
 

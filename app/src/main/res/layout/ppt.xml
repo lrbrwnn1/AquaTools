@@ -8,48 +8,64 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar"></include>
 
+    <TextView
+        android:id="@+id/RectangleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp"
+        android:text="PPT Calculator"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
 
     <EditText
         android:id="@+id/PPT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/RectangleTitle"
         android:ems="10"
         android:hint="Enter desired parts-per-thousand"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <EditText
         android:id="@+id/Gallons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/PPT"
-        android:layout_alignStart="@+id/PPT"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/PPT"
         android:ems="10"
         android:hint="Enter number of gallons"
-        android:inputType="number" />
+        android:inputType="numberDecimal" />
 
     <Button
         android:id="@+id/calc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Gallons"
+        android:layout_below="@+id/Gallons"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:text="Calculate" />
 
-    <RelativeLayout
+
+    <TextView
+        android:id="@+id/PPT_result"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/calc"
+        android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/PPT_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/PPTNOTE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/PPT_result"
+        android:padding="15dp"
+        android:text="@string/Concentration_note"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    </RelativeLayout>
+
 </RelativeLayout>

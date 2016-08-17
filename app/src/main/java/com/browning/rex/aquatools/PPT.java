@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class PPT extends AppCompatActivity {
 
@@ -24,14 +23,7 @@ public class PPT extends AppCompatActivity {
         android.support.v7.widget.Toolbar toolbar = (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
         PPT = (EditText) findViewById(R.id.PPT);
-        if (PPT == null) {
-            Toast.makeText(this, "You did not enter a value", Toast.LENGTH_SHORT).show();
-            return;
-
-        }
-
         Gallons = (EditText) findViewById(R.id.Gallons);
         Button ppt_button = (Button) findViewById(R.id.calc);
         PPT_result = (TextView) findViewById(R.id.PPT_result);
@@ -50,11 +42,11 @@ public class PPT extends AppCompatActivity {
         double ppt = Double.valueOf(PPT.getText().toString());
         double gallons = Double.valueOf(Gallons.getText().toString());
         double Lit = (gallons * 3.78541);
-        double result1 = ((ppt * 0.001) * Lit);
+        double result1 = (ppt * Lit);
         double result2 = (ppt * 0.008335882 * gallons);
         result1 = Math.round(result1 * 10000.0) / 10000.0;
         result2 = Math.round(result2 * 10000.0) / 10000.0;
-        PPT_result.setText("The result is " + result1 + " mg or ml \n" + "The result is " + result2 + " lbs");
+        PPT_result.setText("The result is " + result1 + " g or ml \n" + "The result is " + result2 + " lbs");
     }
 
 }

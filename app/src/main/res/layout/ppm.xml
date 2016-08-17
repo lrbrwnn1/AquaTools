@@ -9,49 +9,64 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar"></include>
 
-
-    <EditText
-        android:id="@+id/PPM"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/RectangleTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/toolbar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:ems="10"
-        android:hint="Enter desired parts-per-million"
-        android:inputType="number" />
+        android:padding="15dp"
+        android:text="PPM Calculator"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <EditText
-        android:id="@+id/Gallons"
+
+    <TextView
+        android:id="@+id/PPM_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/PPM"
-        android:layout_alignStart="@+id/PPM"
-        android:layout_below="@+id/PPM"
-        android:ems="10"
-        android:hint="Enter number of gallons"
-        android:inputType="number" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ppmcalc"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/ppmcalc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Gallons"
+        android:layout_below="@+id/Gallons"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:text="Calculate" />
 
-    <RelativeLayout
+    <EditText
+        android:id="@+id/Gallons"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/PPM"
+        android:ems="10"
+        android:hint="Enter number of gallons"
+        android:inputType="numberDecimal" />
 
-        <TextView
-            android:id="@+id/PPM_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textSize="16sp" />
+    <EditText
+        android:id="@+id/PPM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/RectangleTitle"
+        android:ems="10"
+        android:hint="Enter desired parts-per-million"
+        android:inputType="numberDecimal" />
 
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/PPMNOTE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="15dp"
+        android:text="@string/Concentration_note"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
 </RelativeLayout>
 

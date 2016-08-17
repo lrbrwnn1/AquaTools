@@ -107,4 +107,5 @@
     <string name="tan_to_uia_conversion">TAN to UIA Conversion</string>
     <string name="enter_temperature">Enter temperature</string>
     <string name="enter_nh3_in_mg_l">Enter NH3 in mg/L</string>
+    <string name="Concentration_note">Note: mL result assumes liquid density of solute is near that of water.</string>
 </resources>
