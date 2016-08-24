@@ -23,13 +23,18 @@ public class CylinderVolume extends AppCompatActivity {
 
         CylinderHeight = (EditText) findViewById(R.id.CylinderHeight);
         CylinderRadius = (EditText) findViewById(R.id.CylinderRadius);
+        //The calculation button; CylinderVolume is calculated when this is pressed.
         Button CylinderButton = (Button) findViewById(R.id.CylinderButton);
         CylinderVolume = (TextView) findViewById(R.id.CylinderOutput);
 
         CylinderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                makeCalculation();
+                //I hope this works, but if not just delete if and else statements and keep makeCalculation()
+                if (CylinderHeight.getText().toString().equals("") || Double.valueOf(CylinderRadius.getText().toString().equals(""))
+			        Toast.makeText(getApplicationcontext(), "Empty Field", 5000).show();
+		        else
+			        makeCalculation();
 
             }
         });
