@@ -44,8 +44,7 @@ public class CylinderVolume extends AppCompatActivity {
         //This gets the volume of a cylinder via the formula V=r**2*h*pi
         double cylinder_height = Double.valueOf(CylinderHeight.getText().toString());
         double cylinder_radius = Double.valueOf(CylinderRadius.getText().toString());
-        double CylinderVolumeugly = (Math.PI * (cylinder_radius * cylinder_radius) * cylinder_height * 0.004329);
-        double CylinderVolumeFinal = Math.round(CylinderVolumeugly * 100.0) / 100.0;
+        double CylinderVolumeFinal = Math.round(Math.PI*((cylinder_radius * cylinder_radius) * cylinder_height * 0.004329)*1000.0/1000.0);
         CylinderVolume.setText("The tank can hold a maximum of " + CylinderVolumeFinal + " gallons");
         return CylinderVolume;
     }
