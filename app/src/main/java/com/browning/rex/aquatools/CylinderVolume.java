@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CylinderVolume extends AppCompatActivity {
 
@@ -29,13 +30,17 @@ public class CylinderVolume extends AppCompatActivity {
         CylinderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Brings up a toast if user leaves a field blank
+                if (CylinderHeight.getText().toString().equals("") || CylinderRadius.getText().toString().equals(""))
+                Toast.makeText(getApplicationContext(), "Please enter data", Toast.LENGTH_LONG).show();
+                else
                 makeCalculation();
 
             }
         });
     }
 
-    public TextView makeCalculation() {
+    private TextView makeCalculation() {
         //This gets the volume of a cylinder via the formula V=r**2*h*pi
         double cylinder_height = Double.valueOf(CylinderHeight.getText().toString());
         double cylinder_radius = Double.valueOf(CylinderRadius.getText().toString());

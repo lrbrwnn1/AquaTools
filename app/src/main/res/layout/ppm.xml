@@ -57,16 +57,6 @@
         android:hint="Enter desired parts-per-million"
         android:inputType="numberDecimal" />
 
-    <TextView
-        android:id="@+id/PPMNOTE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:padding="15dp"
-        android:text="@string/Concentration_note"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
 
 </RelativeLayout>
 

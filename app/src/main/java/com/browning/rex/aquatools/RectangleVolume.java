@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class RectangleVolume extends AppCompatActivity {
 
@@ -31,13 +32,17 @@ public class RectangleVolume extends AppCompatActivity {
         RectangleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                makeCalculation();
+                //Brings up a toast if user leaves a field blank
+                if (RectangleHeight.getText().toString().equals("") || RectangleWidth.getText().toString().equals("") || RectangleLength.getText().toString().equals("" ))
+                    Toast.makeText(getApplicationContext(), "Please enter data", Toast.LENGTH_LONG).show();
+                else
+                    makeCalculation();
 
             }
         });
     }
 
-    public TextView makeCalculation() {
+    private TextView makeCalculation() {
         //This gets the volume of a cuboid via the formula V=W*L*H
         double rectangle_height = Double.valueOf(RectangleHeight.getText().toString());
         double rectangle_length = Double.valueOf(RectangleLength.getText().toString());

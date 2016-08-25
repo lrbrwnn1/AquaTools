@@ -57,15 +57,5 @@
         android:layout_below="@+id/calc"
         android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/PPTNOTE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/PPT_result"
-        android:padding="15dp"
-        android:text="@string/Concentration_note"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
 
 </RelativeLayout>

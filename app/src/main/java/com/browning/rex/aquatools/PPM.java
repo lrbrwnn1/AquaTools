@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PPM extends AppCompatActivity {
 
@@ -31,7 +32,11 @@ public class PPM extends AppCompatActivity {
         ppm_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                makeCalculation();
+                //Brings up a toast if user leaves a field blank
+                if (PPM.getText().toString().equals("") || Gallons.getText().toString().equals(""))
+                    Toast.makeText(getApplicationContext(), "Please enter data", Toast.LENGTH_LONG).show();
+                else
+                    makeCalculation();
             }
         });
     }
