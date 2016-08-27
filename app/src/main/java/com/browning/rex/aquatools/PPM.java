@@ -52,8 +52,7 @@ public class PPM extends AppCompatActivity {
         double result2 = (ppm * 0.000008335882 * gallons);
         result1 = Math.round(result1 * 1000.0) / 10000.0;
         result2 = Math.round(result2 * 10000.0) / 10000.0;
-        PPM_result.setText("The result is " + result1 + " ml or g \n" + "The result is " + result2 + " lbs");
-
+        PPM_result.setText("The result is " + result1 + " g \n" + "The result is " + result2 + " lbs");
     }
 
 
