@@ -51,7 +51,7 @@ public class PPT extends AppCompatActivity {
         double result2 = (ppt * 0.008335882 * gallons);
         result1 = Math.round(result1 * 10000.0) / 10000.0;
         result2 = Math.round(result2 * 10000.0) / 10000.0;
-        PPT_result.setText("The result is " + result1 + " g or ml \n" + "The result is " + result2 + " lbs");
+        PPT_result.setText("The result is " + result1 + " g \n" + "The result is " + result2 + " lbs");
     }
 
 }
