@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.browning.rex.aquatools.UIA">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar">
+
+    </include>
+
+    <TextView
+        android:id="@+id/UIATitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Unionized Ammonia Calculator"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/UIA_pH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter pH"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:layout_below="@+id/UIATitle"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/UIA_Salinity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter salinity in PPT"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:layout_below="@+id/UIA_pH"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/UIA_Temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter temperature in Fahrenheit"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:layout_below="@+id/UIA_Salinity"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/UIA_NH3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter ammonia concentration in mg/L"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:layout_below="@+id/UIA_Temperature"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/UIA_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Calculate"
+        android:layout_below="@+id/UIA_NH3"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/UIA_Result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/UIA_Button"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
