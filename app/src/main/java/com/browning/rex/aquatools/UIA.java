@@ -35,7 +35,7 @@ public class UIA extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Brings up a toast if user leaves a field blank
-                if (pH.getText().toString().equals("") || Temp.getText().toString().equals("") || NH3.getText().toString().equals(""))
+                if (pH.getText().toString().equals("") || Salinity.getText().toString().equals("") || Temp.getText().toString().equals("") || NH3.getText().toString().equals(""))
                     Toast.makeText(getApplicationContext(), "Please enter data", Toast.LENGTH_LONG).show();
                 else
                     makeCalculation();
