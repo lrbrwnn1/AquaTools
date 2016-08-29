@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public Button button2;
     public Button button3;
     public Button button4;
+    public Button button5;
 
     public void ppt_init() {
         button1 = (Button) findViewById(R.id.button1);
@@ -70,6 +71,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
+    public void uia_init() {
+        button5 = (Button) findViewById(R.id.button5);
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent recVol = new Intent(MainActivity.this, UIA.class);
+                startActivity(recVol);
+            }
+        });
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ppm_init();
         rectangle_init();
         cylinder_init();
+        uia_init();
 
     }
 

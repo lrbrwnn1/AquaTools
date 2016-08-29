@@ -46,13 +46,13 @@
         android:layout_centerHorizontal="true"
         android:text="@string/rectangle_volume" />
 
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-    </LinearLayout>
+        android:text="TAN to UIA"
+        android:id="@+id/button5"
+        android:layout_below="@+id/button4"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

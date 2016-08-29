@@ -19,6 +19,7 @@
         <activity android:name=".PPT" />
         <activity android:name=".CylinderVolume" />
         <activity android:name=".RectangleVolume" />
+        <activity android:name=".UIA"></activity>
     </application>
 
 </manifest>

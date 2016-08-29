@@ -41,7 +41,6 @@ public class PPT extends AppCompatActivity {
         });
     }
 
-    @TargetApi(Build.VERSION_CODES.N)
     private void makeCalculation() {
         //This takes the given ppt and multiplies it by .0001, then multiplies by Litres to get the desired measurement.
         double ppt = Double.valueOf(PPT.getText().toString());
