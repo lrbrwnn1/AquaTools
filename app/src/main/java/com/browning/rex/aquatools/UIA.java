@@ -55,6 +55,7 @@ public class UIA extends AppCompatActivity {
         double pka = (9.245 + (.116 * I));
         double conversion = (pka + 0.0324 * (298 - Kelvin) + (.0415 / Kelvin) - ph);
         double equation = ((1 / (1 + (Math.pow(10, conversion)))) * N);
+        //remove uia answer due to string.format's handling of decimal place limiting?
         double UIA_Answer = Math.round(equation*100000000.0)/100000000.0;
         String result = String.format("%.8f", UIA_Answer);
         UIA_Result.setText(String.format("%s%s%s", getString(R.string.uia_answer), result, getString(R.string.uia_answer2)));
