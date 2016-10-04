@@ -1,4 +1,4 @@
-AquaTools is a collection of tools meant for use by professional aquarists or aquarium enthusiasts.
+AquaTools is a collection of tools meant for use by professional aquarists, marine biologists, or aquarium enthusiasts.
 It currently includes:
 -PPT Calculator 
 -PPM Calculator
